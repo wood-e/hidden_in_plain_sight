@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+{% include 'head.html' %}
+
+<body>
+    {% include 'header.html' %}
+    <main role="main">
+        {% include 'jumbotron.html' %}
+        <div class="container">
+            <div class="alert alert-warning" role="alert">
+                <h5>Warning about this application</h5>
+                <p>
+                    This is for demonstration purposes only. It is not intended to be used in a production environment.
+                </p>
+                <p>
+                    Please take note of the following
+                <ol>
+                    <li>Do not upload sensitive data.</li>
+                    <li>Do not upload passwords.</li>
+                    <li>Do not upload credit card or bank account details.</li>
+                    <li>Encoding and Decoding of a file only works with png files.</li>
+                </ol>
+                </p>
+            </div>
+        </div>
+    </main>
+    {% include 'footer.html' %}
+</body>
+
+</html>

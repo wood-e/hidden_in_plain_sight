@@ -1,0 +1,7 @@
+numpy
+Pillow
+flask
+python-magic
+python-magic-bin
+starlette
+fastapi

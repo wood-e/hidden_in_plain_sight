@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+{% include 'head.html' %}
+
+<body>
+    {% include 'header.html' %}
+    <main role="main">
+        {% include 'jumbotron.html' %}
+    </main>
+    <div class="container">
+        <div class="card">
+            <div class="card-header">
+                Encode your message in a file.
+            </div>
+            <div class="card-body">
+                <form action="/encode" method="POST" enctype="multipart/form-data">
+                    <div class="form-group">
+                        <label for="message" class="col-form-label">Message to encode</label>
+                        <input type="text" class="form-control" name="message" id="message" placeholder="" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="file">File to encode</label>
+                        <input type="file" class="form-control-file" name="file" id="file" required  accept="image/png">
+                    </div>
+                    <div class="row">
+                        <div class="col text-center">
+                            <input type="submit" value="Encode" class="btn btn-success btn-lg" />
+                        </div>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+</body>
+{% include 'footer.html' %}
+
+</html>

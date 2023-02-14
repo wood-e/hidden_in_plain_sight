@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+{% include 'head.html' %}
+
+<body>
+    {% include 'header.html' %}
+    <main role="main">
+        {% include 'jumbotron.html' %}
+
+    </main>
+    <div class="container">
+        {% if decodedMessage %}
+        <div class="card">
+            <div class="card-header">
+                Your decoded message is
+            </div>
+            <div class="card-body">
+              
+              <p class="card-text"> {{ decodedMessage }}</p>
+             
+            </div>
+          </div>
+        <h3></h3>
+       
+        {% else %}
+        <div class="card">
+            <div class="card-header">
+                Decode a message hidden in a file.
+            </div>
+            <div class="card-body">
+                <form action="/decode" method="POST" enctype="multipart/form-data">
+                    <div class="form-group">
+                        <label for="file">File to decode</label>
+                        <input type="file" class="form-control-file" name="file" id="file" required accept="image/png">
+                    </div>
+                    <div class="row">
+                        <div class="col text-center">
+                            <input type="submit" value="Decode" class="btn btn-success btn-lg" />
+                        </div>
+                    </div>
+                </form>
+            </div>
+        </div>
+        {% endif %}
+    </div>
+</body>
+{% include 'footer.html' %}
+
+</html>
